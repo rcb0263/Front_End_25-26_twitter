@@ -11,7 +11,7 @@ export type Comentario = {
     _id: string;
     username: string;
   };
-  fecha: string; // ISO date
+  fecha: string;
 };
 
 export type Retweet = {
