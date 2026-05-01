@@ -1,0 +1,74 @@
+.create-post-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e6e8ef;
+    border-radius: 14px;
+    margin: 10px;
+    padding: 16px;
+    min-height: 25vh;
+    width: 45%;
+    form{
+        width: 100%;
+    }
+}
+
+.create-post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+.create-post-card-contents{
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    width: 100%;
+    padding-right: 2%;
+}
+
+.post-user {
+  display: flex;
+  background-color: #a3c9f0;
+  color: #4f46e5;
+  
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+a{  
+    text-decoration: none;
+}
+.post-user:hover {
+  border-style: solid;
+  border-color: #52a9ff;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.post-Content {
+  width: 100%;
+  textarea{
+    width: 100%;
+  }
+}
+.post{
+    width:100%;
+}
+.post-content {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 8px 0 12px;
+  white-space: pre-wrap;
+  span{
+    margin-left: 10px;
+  }
+}
+
+button:hover{
+  cursor: pointer;
+}

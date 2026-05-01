@@ -1,0 +1,43 @@
+.contenedor{
+    width: 50%;
+    height: auto;
+    gap: 3%;
+}
+.centrado{
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+
+.usuarioA{
+    width:100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    
+}
+.usuario {
+  display: flex;
+  background-color: #a3c9f0;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+a{  
+    text-decoration: none;
+}
+.usuario:hover {
+    border-style: solid;
+    border-color: #52a9ff;
+    border-width: 2px;
+}

@@ -1,66 +1,57 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+import { LoginContainer } from "@/components/login";
+import "./style.css"
+import { useEffect, useState } from "react";
+import { getPostsHome, retweetPost, toggleLikePost } from "@/lib/api/database";
+import { Post } from "@/types";
+import { PostCard } from "@/components/listaPosts";
+import { CreatePostCard } from "@/components/publicarPost";
 
-export default function Home() {
+const Page = () => {
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [page, setPage] = useState(1);
+  const [totalPaginas, setTotalPaginas] = useState(1);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+
+    getPostsHome(page, 10)
+      .then((data) => {
+        setPosts(data.posts);
+        setTotalPaginas(data.totalPaginas);
+      })
+      .catch((err) => {
+        console.error(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+
+  }, [page]);
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <div>
+      <div className="mainPage">
+        <CreatePostCard/>
+
+        {loading && <p>Cargando...</p>}
+
+        {!loading &&
+          <div className="listaPostCard">
+          { posts.map((post) => (
+            <PostCard
+              key={post._id}
+              post={post}
             />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+          ))}
+          </div>
+          }
+
+      </div>
     </div>
   );
-}
+};
+
+export default Page;
+

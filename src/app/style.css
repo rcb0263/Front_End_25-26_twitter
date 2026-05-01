@@ -1,0 +1,18 @@
+.mainPage{
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.listaPostCard{
+    position: relative;
+    gap: 14px;
+    width: 45%;
+}
+.ContenedorPaginad{
+    position: absolute;
+    top: 10%;
+}

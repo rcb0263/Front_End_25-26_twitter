@@ -1,0 +1,99 @@
+.layout{
+    min-height: 10%;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 8px;
+}
+.layout a {
+    gap: 10px;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-around;
+}
+.logoImage{
+    font-size: 25px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: auto;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(21, 120, 206);
+    background: solid;
+}
+.logoWords{
+    font-size: 30px;
+    color: black;
+    background: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoWord{
+    font-size: 30px;
+    color: blue;
+    background: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botonesLayout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2;
+}
+
+.botonL {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+
+    border: none;
+    background: transparent;
+
+    border-radius: 8px;
+
+    color: rgb(100, 100, 100);
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.botonL:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: rgb(220, 50, 50);
+}
+
+.boton-user {
+  display: flex;
+  background-color: #a3c9f0;
+  color: #4f46e5;
+  border:transparent;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.boton-user:hover {
+    border-style: solid;
+    border-color: #52a9ff;
+    border-width: 2px;
+    cursor: pointer;
+}

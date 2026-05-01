@@ -1,0 +1,78 @@
+.loginContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    gap: 30px;
+    padding: 30px 0px;
+    border-radius: 20px;
+
+    width: 400px;
+}
+.campo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.chooseContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #5d646f;
+    width: 95%;
+    padding: 3px;
+    gap: 2%;
+    border-radius: 14px;
+    button{
+        width: 49%;
+        background-color: lab(89.3% -0.52 -4.61)
+    }
+}
+form{
+    width: 95%;
+    padding: 0%;
+    input{
+        border-radius: 10px;
+        height: 30px;
+        padding: 0 10px;
+    }
+}
+.tab-selected {
+    color: rgb(15, 23, 42); /* foreground fuerte */
+    font-weight: 500;
+    padding: 3px;
+    background-color: rgb(212, 207, 207);
+    border-radius: 14px;
+    border: transparent;
+}
+
+.tab-not-selected {
+    color: rgba(15, 23, 42, 0.6); /* más apagado */
+    background-color: rgba(0, 0, 0, 0.03) !important;
+    color: white;
+    font-weight: 500;
+    border: transparent;
+    background: transparent;
+    border-radius: 14px;
+}
+button:hover{
+  cursor: pointer;
+}
+
+.tab-not-selected:hover {
+    border: transparent;
+}
+
+form{
+    gap: 30px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    .in{
+        display: flex;
+        flex-direction: column;
+    }
+}
