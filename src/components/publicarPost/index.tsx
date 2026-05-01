@@ -45,7 +45,6 @@ export const CreatePostCard = ({ onSubmit, userInitial = "?" }: Props) => {
                             const res = await crearPost({
                                 contenido: text
                             })
-                          //router.push("/")
                         } catch (error: any) {
                           console.error(error.response?.data || error.message);
                         }

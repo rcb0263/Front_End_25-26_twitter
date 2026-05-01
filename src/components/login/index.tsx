@@ -5,9 +5,9 @@ import { useRouter } from "next/navigation"
 
 export const LoginContainer = () => {
   const [crear, setCrear] = useState<boolean>(false)
-  const [mail, setMail] = useState<string>('Rolo@mail.com')
+  const [mail, setMail] = useState<string>('')
   const [userName, setUserName] = useState<string>('')
-  const [password, setPassword] = useState<string>('Rolo')
+  const [password, setPassword] = useState<string>('')
   const router = useRouter()
   
   return(

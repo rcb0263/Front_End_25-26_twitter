@@ -35,7 +35,8 @@ const ProfilePage = () => {
   return (
     <div className="centrado">
       {loading&&<h1>Cargando</h1>}
-      {profile&&<div className="contenedor">
+      {profile&&
+      <div className="contenedor">
       <div className="usuarioA ">
         <div className="usuario">
           {profile.user.username[0].toUpperCase()}
